@@ -1,0 +1,60 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;  
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #afe0ff;
+    font-family: 'Londrina Outline', sans-serif; /* Apply the font to the entire body */
+}
+.decorativeImage {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    opacity: 1.0;
+}
+
+.titleName {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px; /* Add space between the title and the grid */
+    font-family: 'Londrina Outline', sans-serif; /* Ensure the font is applied to the title */
+}
+
+.ticGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: #afe0ff;
+    border: 2px solid #afe0ff;
+}
+
+.ticGrid section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f7d0ff;
+    border: 1px solid #000;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.ticGrid section:hover {
+    background-color: #ba89bf;
+}
